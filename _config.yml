@@ -1,8 +1,8 @@
 # Basic
 title: 野渡无人舟自横
-subtitle: 愿无岁月可回首
+subtitle: 生活/技术
 welcome_message: 
-description: Vno Jekyll is a port of my Ghost theme vno.
+description: 愿无岁月可回首
 creator: <a href="https://sarlanori.github.io">@sarlanori</a>
 
 url: "https://sarlanori.github.io"
@@ -39,7 +39,7 @@ comment:
 social:
     weibo: sarlanori
     github: sarlanori
-    twitter: onevcat
+    #twitter: onevcat
     #gplus: 107108267983477358170
     mail: sarlanori@qq.com
 
