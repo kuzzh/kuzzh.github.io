@@ -1,4 +1,9 @@
-## 在 QT 中使用 Cookie
+---
+layout: post
+title: 在 QT 中使用 Cookie
+categories: [技术, QT]
+date: 2018-12-20
+---
 
 > 此文讲述的 Cookie 使用方法是指将 Cookie 键值对字符串通过解析构建成 `QList<QNetworkCookie>`，然后通过 `QNetworkRequest.setHeader(QNetworkRequest::CookieHeader, var)` 附加到请求的头里面发送给服务器。
 

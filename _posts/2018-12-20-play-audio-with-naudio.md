@@ -1,4 +1,9 @@
-## 使用 **NAudio** 播放音频文件
+---
+layout: post
+title: 使用 NAudio 播放音频文件
+categories: [技术, NAudio]
+date: 2018-12-20
+---
 
 > Author: zhoubing
 > 
