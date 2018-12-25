@@ -33,19 +33,21 @@ var onBallonDisappeaed;
 
 function flyBallon(callback) {
 	onBallonDisappeaed = callback;
-	init(10);
+	init(6);
 	move();
 	t = setInterval(move, 1000 / 30);
 }
 //事件委托
 document.addEventListener('click', function (e) {
-	if (e.target.className.toLowerCase() === 'ballon') {
+	if (e.target.className.toLowerCase().indexOf('ballon') > -1) {
 		var e = e.target;
 		//移除节点对象
 		boom.call(e);
 		removeBall(e);
 		//移除一个新生成一个
 		//init(1);
+		var player = document.querySelector("#ballonRing");
+		player.play();
 	}
 }, false);
 
@@ -62,7 +64,9 @@ function boom() {
 	this.t = setInterval(function () {
 		if (this.offsetWidth < 10) {
 			clearInterval(this.t);
-			this.parentNode.removeChild(this);
+			if (this.parentNode) {
+				this.parentNode.removeChild(this);
+			}
 			return false;
 		}
 		index++;
@@ -84,6 +88,9 @@ function init(num) {
 		ball.className = "ballon";
 		ball.style.top = wH + 'px';
 		ball.style.left = randomX + 'px';
+		if (MobileUA.SMART_PHONE) {
+			$(ball).addClass('ballon-mobile');
+		}
 		ball.speed = ~~(Math.random() * 6) + 1;
 
 		fragment.appendChild(ball);

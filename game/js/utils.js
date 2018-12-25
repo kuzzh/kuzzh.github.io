@@ -2,15 +2,6 @@ function loadImage(imageUrl, width, height, callback) {
     var image = new Image();
     
     image.onload = function () {
-        /*
-        let canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        let ctx = canvas.getContext('2d');
-        ctx.drawImage(image, 0, 0);
-
-        callback(ctx.imageBitmap);
-        */
         createImageBitmap(image, {
             resizeWidth: width,
             resizeHeight: height

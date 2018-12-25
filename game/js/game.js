@@ -13,6 +13,7 @@ var JigsawGame = function (canvas, imageUrl) {
         _image: null,
         _canvas: canvas,
         _ctx: canvas.getContext("2d"),
+        _borderColor: "#17cea1",
         _boardWidth: 600,
         _boardHeight: 600,
         _sliceWidth: this._boardWidth / COL_NUM,
@@ -85,7 +86,7 @@ var JigsawGame = function (canvas, imageUrl) {
         },
 
         _resizeCanvas: function () {
-            let backBtn = $('#btnBack');
+            let backBtn = $('#back');
             let topHeight = parseInt(backBtn.height()) + parseInt(backBtn.css('margin-top')) + parseInt(backBtn.css('margin-bottom')) +
                 parseInt(backBtn.css('padding-top')) + parseInt(backBtn.css('padding-bottom'));
             if (window.innerWidth == 0 || window.innerHeight == 0) {
@@ -237,19 +238,20 @@ var JigsawGame = function (canvas, imageUrl) {
                 };
                 // 触屏设备
                 that._canvas.ontouchmove = function (evt) {
+                    evt.preventDefault();
                     that._canvas.onmousemove({
-                        offsetX: evt.touches[0].clientX,
-                        offsetY: evt.touches[0].clientY - (screen.height - that._canvas.height)
+                        offsetX: evt.changedTouches[0].pageX,
+                        offsetY: evt.changedTouches[0].pageY - (window.innerHeight - that._canvas.height)
                     });
                 };
                 // 触屏设备
                 that._canvas.ontouchstart = function (evt) {
+                    evt.preventDefault();
                     if (!that._isRunning) {
                         return;
                     }
-                    console.log(evt)
-                    that._mousePosition.x = evt.touches[0].clientX;
-                    that._mousePosition.y = evt.touches[0].clientY - (screen.height - that._canvas.height);
+                    that._mousePosition.x = evt.changedTouches[0].pageX;
+                    that._mousePosition.y = evt.changedTouches[0].pageY - (window.innerHeight - that._canvas.height);
 
                     that._updateHoverSlice();
 
@@ -257,6 +259,7 @@ var JigsawGame = function (canvas, imageUrl) {
                 };
                 // 触屏设备
                 that._canvas.ontouchend = function (evt) {
+                    evt.preventDefault();
                     that._canvas.onmouseup();
                 };
                 window.requestAnimationFrame(_redraw);
@@ -292,9 +295,17 @@ var JigsawGame = function (canvas, imageUrl) {
             jigsawGame._ctx.drawImage(jigsawGame._image, jigsawGame._hoverSlice.sx, jigsawGame._hoverSlice.sy, jigsawGame._hoverSlice.sWidth, jigsawGame._hoverSlice.sHeight,
                 jigsawGame._hoverSlice.dx, jigsawGame._hoverSlice.dy, jigsawGame._hoverSlice.dWidth, jigsawGame._hoverSlice.dHeight);
             if (jigsawGame._isRunning) {
+                jigsawGame._ctx.strokeStyle = jigsawGame._borderColor;
                 jigsawGame._ctx.strokeRect(jigsawGame._hoverSlice.dx, jigsawGame._hoverSlice.dy, jigsawGame._hoverSlice.dWidth, jigsawGame._hoverSlice.dHeight);
             }
         }
+
+        // 绘制版权信息
+        jigsawGame._ctx.font = "11px Helvetica Neue";
+        jigsawGame._ctx.fillStyle = "#ccc";
+        jigsawGame._ctx.textBaseline = "bottom";
+        jigsawGame._ctx.textAlign = "center";
+        jigsawGame._ctx.fillText("Copyright©kuzzh 2018", jigsawGame._canvas.width / 2, jigsawGame._canvas.height);
 
         window.requestAnimationFrame(_redraw);
     }

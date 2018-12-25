@@ -29,6 +29,10 @@ canvas {
     /* x y 羽化程度 半径 颜色 内外模式 */
     box-shadow: -8px -8px 80px 10px #40a9ff inset;
 }
+.ballon-mobile {
+    width: 80px !important;
+    height: 80px !important;
+}
 .ballon:before{
     content: "";
     display: block;
