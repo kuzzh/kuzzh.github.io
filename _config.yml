@@ -3,9 +3,9 @@ title: 野渡无人舟自横
 subtitle: 生活/技术
 welcome_message: 
 description: 愿无岁月可回首
-creator: <a href="https://sarlanori.github.io">@sarlanori</a>
+creator: <a href="https://kuzzh.github.io">@kuzzh</a>
 
-url: "https://sarlanori.github.io"
+url: "https://kuzzh.github.io"
 
 permalink: /:year/:month/:title/
 
@@ -22,7 +22,8 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: 关于, description: 关于这个网站, url: 'https://sarlanori.github.io'}
+    - {title: 游戏, description: 使用 HTML 5 写的小游戏 , url: 'https://kuzzh.github.io/2018-12-25-html5-game.html'}
+    - {title: 关于, description: 关于这个网站, url: 'https://kuzzh.github.io'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
@@ -37,8 +38,8 @@ comment:
     
 # Social
 social:
-    weibo: sarlanori
-    github: sarlanori
+    weibo: kuzzh
+    github: kuzzh
     #twitter: onevcat
     #gplus: 107108267983477358170
     mail: sarlanori@qq.com
