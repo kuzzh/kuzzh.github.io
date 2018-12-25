@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: 游戏, description: 使用 HTML 5 写的小游戏 , url: 'https://kuzzh.github.io/2018/12/html5-game'}
+    - {title: 游戏, description: 使用 HTML 5 写的小游戏 , url: 'https://kuzzh.github.io/2018/12/html5-game/'}
     - {title: 关于, description: 关于这个网站, url: 'https://kuzzh.github.io'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
