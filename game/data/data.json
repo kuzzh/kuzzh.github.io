@@ -1,4 +1,22 @@
 [
+{
+        "title": "nemo",
+        "src": "images/tiles/nemo.jpg",
+        "width": 1240,
+        "height": 826
+    },
+	{
+        "title": "toystory",
+        "src": "images/tiles/toystory.jpg",
+        "width": 1240,
+        "height": 826
+    },
+	{
+        "title": "walle",
+        "src": "images/tiles/walle.jpg",
+        "width": 1240,
+        "height": 826
+    },
     {
         "title": "test",
         "src": "images/tiles/1.png",
