@@ -1,0 +1,32 @@
+[
+    {
+        "title": "test",
+        "src": "images/tiles/1.png",
+        "width": 1240,
+        "height": 826
+    },
+    {
+        "title": "test",
+        "src": "images/tiles/2.jpg",
+        "width": 1600,
+        "height": 1000
+    },
+    {
+        "title": "test",
+        "src": "images/tiles/3.jpg",
+        "width": 1920,
+        "height": 1200
+    },
+    {
+        "title": "test",
+        "src": "images/tiles/4.jpg",
+        "width": 1600,
+        "height": 900
+    },
+    {
+        "title": "test",
+        "src": "images/tiles/5.jpg",
+        "width": 450,
+        "height": 300
+    }
+]

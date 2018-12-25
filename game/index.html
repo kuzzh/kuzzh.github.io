@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Fireworks</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="padding: 10px;">
+        <div class="row">
+        </div>
+    </div>
+    <script>
+        $.getJSON("./data/data.json", function (images) {
+            let row = $(".row");
+            for (let i = 0; i < images.length; i++) {
+                let image = images[i];
+                row.append('<div class="col-sm-3 col-md-6 col-lg-4">' +
+                    '<div class="panel panel-success">' +
+                    '<div class="panel-heading">' +
+                    ' <h3 class="panel-title">' + image.title + '</h3>' +
+                    '</div>' +
+                    '<div class="panel-body" style="padding:0px;height:300px">' +
+                    '<a href="game.html?' + image.src + '"><img src="' + image.src + '" /></a>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

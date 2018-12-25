@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #1f6081;
+    background-image: url("../images/shadow.png"), url("../images/pixels.png");
+    background-position: 0 0, 0 50%;
+    background-repeat: repeat-x, repeat;
+    overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

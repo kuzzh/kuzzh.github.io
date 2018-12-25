@@ -1,0 +1,12 @@
+Type Chrome://flags in the address-bar
+
+Search: Autoplay
+
+Autoplay Policy
+Policy used when deciding if audio or video is allowed to autoplay.
+
+– Mac, Windows, Linux, Chrome OS, Android
+
+Set this to "No user gesture is required"
+
+Relaunch Chrome and you don't have to change any code

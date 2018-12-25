@@ -1,0 +1,43 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #1f6081;
+    background-image: url("../images/shadow.png"), url("../images/pixels.png");
+    background-position: 0 0, 0 50%;
+    background-repeat: repeat-x, repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+canvas {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.ballon{
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 160px;
+    background-color: #fafaf9;
+    border-radius: 160px 160px 64px 160px;
+    transform: rotate(45deg);
+    /* x y 羽化程度 半径 颜色 内外模式 */
+    box-shadow: -8px -8px 80px 10px #40a9ff inset;
+}
+.ballon:before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 8px solid transparent;
+    border-right-color:#40a9ff;
+    transform: rotate(45deg);
+    border-radius: 50%;
+
+}

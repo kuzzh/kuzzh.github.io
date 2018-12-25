@@ -1,0 +1,24 @@
+Disable zooming in for photo swipe
+
+All solutions described here did not work for me. Here is a complete solution that turns off zooming.
+
+Settings:
+
+var options = {
+    // Gallery options
+    maxSpreadZoom: 1,
+    getDoubleTapZoom: function (isMouseClick, item) {
+        return item.initialZoomLevel;
+    },
+    // UI options
+    zoomEl: false
+};
+Gallery init:
+
+var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+// ...
+And finally add this CSS snippet to disable zoom cursor:
+
+.pswp--zoom-allowed .pswp__img {
+    cursor: default !important;
+}
