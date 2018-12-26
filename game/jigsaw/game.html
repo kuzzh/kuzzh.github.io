@@ -18,7 +18,23 @@
 </head>
 
 <body>
-    <img id="back" src="images/back.png" style="margin:10px;" onclick="history.back()" />
+
+    <div>
+        <div class="pull-left">
+            <a href="#" onclick="window.location.href='index.html'"><img id="back" src="images/back.png" style="margin:10px;" /></a>
+        </div>
+        <div class="btn-group pull-right" style="margin: 10px">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">规格 
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" onclick="jigsawGame.replay(2,2)">2x2</a></li>
+                <li><a href="#" onclick="jigsawGame.replay(3,3)">3x3</a></li>
+                <li><a href="#" onclick="jigsawGame.replay(4,4)">4x4</a></li>
+                <li><a href="#" onclick="jigsawGame.replay(5,5)">5x5</a></li>
+            </ul>
+        </div>
+    </div>
     <canvas id="canvas">Your browser does not support the <code>canvas</code> element.</canvas>
     <audio id="dropRing" src="tones/GeneralButton.mp3" type="audio/mp3" preload="auto">
         Your browser does not support the
@@ -66,24 +82,25 @@
     </div>
 
     <script>
-                                                                           $(document).ready(function () {
-                                                                               let imageUrl = document.location.href.split('?')[1];
-                                                                               let canvas = document.querySelector('#canvas');
-                                                                               let jigsawGame = new JigsawGame(canvas, imageUrl);
-                                                                               jigsawGame.init();
+        var jigsawGame;
+        $(document).ready(function () {
+            let imageUrl = document.location.href.split('?')[1];
+            let canvas = document.querySelector('#canvas');
+            jigsawGame = new JigsawGame(canvas, imageUrl);
+            jigsawGame.init();
 
-                                                                               $("#replay").click(function () {
-                                                                                   jigsawGame.replay();
-                                                                                   $("#myModal").modal('hide');
-                                                                               });
+            $("#replay").click(function () {
+                jigsawGame.replay();
+                $("#myModal").modal('hide');
+            });
 
-                                                                               // Reposition when a modal is shown
-                                                                               $('.modal').on('show.bs.modal', reposition);
-                                                                               // Reposition when the window is resized
-                                                                               $(window).on('resize', function () {
-                                                                                   $('.modal:visible').each(reposition);
-                                                                               });
-                                                                           });
+            // Reposition when a modal is shown
+            $('.modal').on('show.bs.modal', reposition);
+            // Reposition when the window is resized
+            $(window).on('resize', function () {
+                $('.modal:visible').each(reposition);
+            });
+        });
     </script>
 </body>
 

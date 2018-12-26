@@ -1,16 +1,20 @@
-function loadImage(imageUrl, width, height, callback) {
+function loadImage(imageUrl, callback) {
     var image = new Image();
-    
+
     image.onload = function () {
-        createImageBitmap(image, {
-            resizeWidth: width,
-            resizeHeight: height
-        }).then(function (sprite) {
-            callback(sprite);
-        });
+        callback(image);
     }
 
     image.src = imageUrl;
+}
+
+function resizeImage(img, width, height, callback) {
+    createImageBitmap(img, {
+        resizeWidth: width,
+        resizeHeight: height
+    }).then(function (sprite) {
+        callback(sprite);
+    });
 }
 
 function random(min, max) {
