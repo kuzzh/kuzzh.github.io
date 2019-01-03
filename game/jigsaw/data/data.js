@@ -1,4 +1,4 @@
-[
+var images = [
     {
         "title": "nemo",
         "src": "images/tiles/nemo.jpg",
@@ -54,4 +54,4 @@
         "width": 450,
         "height": 300
     }
-]
+];
