@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [拼图游戏总结1]在 Canvas 中绘制圆角图片
+title: 拼图游戏总结1-在 Canvas 中绘制圆角图片
 categories: [技术,游戏]
 date: 2018-12-26
 ---
