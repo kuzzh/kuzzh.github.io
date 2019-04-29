@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [拼图游戏总结2]调整图片尺寸
+title: 拼图游戏总结2-调整图片尺寸
 categories: [技术,游戏]
 date: 2018-12-26
 ---
