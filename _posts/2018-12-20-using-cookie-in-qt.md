@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 QT 中使用 Cookie
-categories: [技术, QT]
+tags: [技术, QT]
 date: 2018-12-20
 ---
 
